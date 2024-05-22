@@ -1,5 +1,6 @@
 @Library('training-shared-library-demo')
-pipeline {
+pipeline
+{
   agent any
   stages{
     stage('Shared library demo')
