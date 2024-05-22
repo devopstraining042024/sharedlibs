@@ -1,6 +1,7 @@
-@Library('training-shared-library-demo')
-pipeline{
-  agent any
+@Library('training-shared-library-demo') _
+pipeline {
+    agent any
+
   stages{
     stage('Shared library demo')
     {
