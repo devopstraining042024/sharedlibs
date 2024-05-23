@@ -29,7 +29,7 @@ pipeline {
     stage('archiveArtifacts - shared library')
     {
         steps{
-        archiveArtifacts()
+        artifactsArchieveStore()
         }
     }
      stage('deployTomcat - shared library')
