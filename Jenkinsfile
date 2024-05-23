@@ -14,6 +14,22 @@ pipeline {
           }
       }
     }
+    stage('SCM check out - shared library')
+    {
+        scmCheckout()
+    }
+    stage('Maven Build and Sonar scan - shared library')
+    {
+        mavenBuildSonarScan()
+    }
+    stage('archiveArtifacts - shared library')
+    {
+        archiveArtifacts()
+    }
+     stage('deployTomcat - shared library')
+    {
+        deployTomcat()
+    }
   }
 }
       
