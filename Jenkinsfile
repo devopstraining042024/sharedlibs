@@ -23,7 +23,7 @@ pipeline {
     stage('Maven Build and Sonar scan - shared library')
     {
         steps{
-            sonarScan()
+            mavenBuildSonarScan()
         }
     }
     stage('archiveArtifacts - shared library')
