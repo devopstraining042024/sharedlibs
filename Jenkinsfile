@@ -1,6 +1,6 @@
 @Library('training-shared-library-demo1') _
 pipeline {
-    agent slave1
+    agent {slave1}
 
   stages{
     stage('Shared library demo')
