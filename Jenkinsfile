@@ -1,7 +1,7 @@
 @Library('training-shared-library-demo1') _
 pipeline {
-    agent { label 'slave1' }
-
+    // agent { label 'slave1' }
+    agent any
   stages{
     stage('Shared library demo')
     {
@@ -14,29 +14,29 @@ pipeline {
           }
       }
     }
-    // stage('SCM check out - shared library')
-    // {
-    //     steps{
-    //         scmCheckout()
-    //     }    
-    // }
-    // stage('Maven Build and Sonar scan - shared library')
-    // {
-    //     steps{
-    //         mavenBuildSonarScan()
-    //     }
-    // }
-    // stage('archiveArtifacts - shared library')
-    // {
-    //     steps{
-    //     artifactsArchieveStore()
-    //     }
-    // }
-    //  stage('deployTomcat - shared library')
-    // {    
-    //     steps{
-    //     deployTomcat()
-    //     }
-    // }
+    stage('SCM check out - shared library')
+    {
+        steps{
+            scmCheckout()
+        }    
+    }
+    stage('Maven Build and Sonar scan - shared library')
+    {
+        steps{
+            mavenBuildSonarScan()
+        }
+    }
+    stage('archiveArtifacts - shared library')
+    {
+        steps{
+        artifactsArchieveStore()
+        }
+    }
+     stage('deployTomcat - shared library')
+    {    
+        steps{
+        deployTomcat()
+        }
+    }
   }
 }
