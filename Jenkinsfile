@@ -14,29 +14,29 @@ pipeline {
           }
       }
     }
-    stage('SCM check out - shared library')
-    {
-        steps{
-            scmCheckout()
-        }    
-    }
-    stage('Maven Build and Sonar scan - shared library')
-    {
-        steps{
-            mavenBuildSonarScan()
-        }
-    }
-    stage('archiveArtifacts - shared library')
-    {
-        steps{
-        artifactsArchieveStore()
-        }
-    }
-     stage('deployTomcat - shared library')
-    {    
-        steps{
-        deployTomcat()
-        }
-    }
+    // stage('SCM check out - shared library')
+    // {
+    //     steps{
+    //         scmCheckout()
+    //     }    
+    // }
+    // stage('Maven Build and Sonar scan - shared library')
+    // {
+    //     steps{
+    //         mavenBuildSonarScan()
+    //     }
+    // }
+    // stage('archiveArtifacts - shared library')
+    // {
+    //     steps{
+    //     artifactsArchieveStore()
+    //     }
+    // }
+    //  stage('deployTomcat - shared library')
+    // {    
+    //     steps{
+    //     deployTomcat()
+    //     }
+    // }
   }
 }
